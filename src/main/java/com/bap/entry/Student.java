@@ -3,13 +3,6 @@ package com.bap.entry;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-/**
- * @ClassName Student
- * @Author lyd
- * @Date $ $
- * @Vesion 1.0
- * @Description 学生实体类
- **/
 @Component
 @ConfigurationProperties(prefix = "student")
 public class Student {

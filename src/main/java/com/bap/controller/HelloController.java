@@ -4,7 +4,6 @@ import com.bap.Mapper.StudentMapper;
 import com.bap.entry.Student;
 import com.bap.entry.StudentInfo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,16 +13,9 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.List;
 
-/**
- * @ClassName HelloController
- * @Author lyd
- * @Date $ $
- * @Vesion 1.0
- * @Description 第一个api 或者 hello api
- **/
-//@RestController
-@Controller   //获取视图 jsp、html
-public class HelloController {
+@RestController
+//@Controller   //获取视图 jsp、html
+public class HelloController{
     /*@Value("${name}")
     private String name;
     @Value("${age}")
@@ -32,7 +24,7 @@ public class HelloController {
     private Student stu;
 
     @Autowired
-    private StudentMapper studentMapper;
+    StudentMapper studentMapper;
 
     @RequestMapping("/hello")
     public String hello(){
@@ -69,5 +61,11 @@ public class HelloController {
         List<StudentInfo> ls = studentMapper.findAll();
         model.addAttribute("students",ls);
         return "listStudent";
+    }
+
+    @RequestMapping("/listStudent1")
+    public List<StudentInfo> listStudent1(){
+        List<StudentInfo> ls = studentMapper.findAll();
+        return ls;
     }
 }

@@ -2,13 +2,6 @@ package com.bap.entry;
 
 import java.util.Date;
 
-/**
- * @ClassName StudentInfo
- * @Author lyd
- * @Date $ $
- * @Vesion 1.0
- * @Description studentInfo
- **/
 public class StudentInfo {
     private Integer id;
     private Integer student_id;
